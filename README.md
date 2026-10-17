@@ -1,92 +1,93 @@
-# 🚀 Python Projects Suite
+# 📇 Contact Book
 
-This workspace contains two distinct, fully-featured, Python-based applications:
+A modern, full-featured **Contact Book web application** built with Python Flask and a clean, responsive UI.
 
----
+## 📸 Screenshot
 
-## 📁 Projects Overview
-
-### 1. [Digital Notice Board System](file:///media/loki/New%20Volume6/repos/other%27s%20project/digital_notice_board/README.md) (`digital_notice_board/`)
-A centralized digital bulletin board for campus, office, or organizational announcements.
-- **Admin Capabilities**: Post, update, delete notices, and pin critical bulletins to top.
-- **Sorting & Viewing**:
-  - Sort notices by date (newest/oldest), category, or priority (Urgent first).
-  - Filter by category pills with live counters.
-  - Live search matching titles, body text, and departments.
-- **Display Modes**:
-  - **Modern Web App** with breaking news live ticker, live clock, card grid, and full-screen **Kiosk / Digital Signage Mode** for wall display monitors (`http://127.0.0.1:5001`).
-  - **Interactive Terminal CLI** (`cli.py`).
-- **Database**: SQLite with persistent storage and sample seed announcements.
-
-### 2. [Contact Book Application](file:///media/loki/New%20Volume6/repos/other%27s%20project/contact_book/README.md) (`contact_book/`)
-An intuitive contact management directory to store, organize, and manage personal and professional contacts.
-- **Full Contact Profiles**: Name, mobile number, email address, physical address, organization / company, notes, and favorite status.
-- **Operations**:
-  - Add new contacts with validation.
-  - Real-time multi-field search (name, mobile, email, organization, address).
-  - Update contact information with field preservation.
-  - Delete unwanted contacts with confirmation.
-  - Display all contacts with alphabetical sorting (A-Z, Z-A), company grouping, and favorites filtering.
-- **Data Export & Quick Actions**:
-  - Export contacts as **vCard (.vcf)** or **CSV (.csv)**.
-  - One-click call (`tel:`), email (`mailto:`), Google Maps directions, and copy to clipboard.
-- **Interfaces**:
-  - **Modern Split-View Web App** (`http://127.0.0.1:5002`).
-  - **Interactive Terminal CLI** (`cli.py`).
-- **Database**: SQLite with persistent storage and sample seed contacts.
+![Contact Book App](contact_book/static/screenshot.png)
 
 ---
 
-## ⚡ Quick Start Guide
+## ✨ Features
 
-### Setup Virtual Environment
+- 📋 View, add, edit and delete contacts
+- ⭐ Mark contacts as favourites
+- 🔍 Search contacts by name, phone, email or company
+- 🏢 Filter by organisation / company
+- 🔃 Sort contacts A–Z or Z–A
+- 📤 Export contacts as **CSV** or **VCF (vCard)**
+- 🌙 Dark mode support
+- 📱 Responsive design
+
+---
+
+## 🚀 Quick Start
+
+### Step 1 — Clone the repository
 ```bash
-# Activate virtual environment
-source .venv/bin/activate
+git clone https://github.com/omik-kashyap/other-s-project.git
+cd other-s-project
+```
+
+### Step 2 — Create a virtual environment
+```bash
+python -m venv .venv
+```
+
+### Step 3 — Install dependencies
+```bash
+# Windows
+.venv\Scripts\pip install -r requirements.txt
+
+# Mac / Linux
+.venv/bin/pip install -r requirements.txt
+```
+
+### Step 4 — Run the app
+```bash
+# Windows
+.venv\Scripts\python contact_book\app.py
+
+# Mac / Linux
+.venv/bin/python contact_book/app.py
+```
+
+### Step 5 — Open in browser
+```
+http://127.0.0.1:5002
+```
+
+> 💡 **Tip:** Steps 1–3 are only needed **once**. After that, just run Step 4 & 5 every time.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Python 3 | Backend language |
+| Flask | Web framework |
+| SQLite | Database (auto-created) |
+| HTML / CSS / JS | Frontend UI |
+
+---
+
+## 📁 Project Structure
+
+```
+contact_book/
+├── app.py          # Flask app & API routes
+├── database.py     # SQLite database logic
+├── cli.py          # Command-line interface
+├── templates/
+│   └── index.html  # Main HTML page
+└── static/
+    ├── css/        # Stylesheets
+    └── js/         # Frontend JavaScript
 ```
 
 ---
 
-### Running Digital Notice Board
+## 📬 Contact
 
-#### Web Application:
-```bash
-cd digital_notice_board
-python3 app.py
-```
-Open **`http://127.0.0.1:5001`** in your browser.
-
-#### Terminal CLI:
-```bash
-cd digital_notice_board
-python3 cli.py
-```
-
----
-
-### Running Contact Book
-
-#### Web Application:
-```bash
-cd contact_book
-python3 app.py
-```
-Open **`http://127.0.0.1:5002`** in your browser.
-
-#### Terminal CLI:
-```bash
-cd contact_book
-python3 cli.py
-```
-
----
-
-## 🧪 Run Tests
-
-```bash
-# Run Digital Notice Board tests
-.venv/bin/python digital_notice_board/test_notice_board.py
-
-# Run Contact Book tests
-.venv/bin/python contact_book/test_contact_book.py
-```
+Made with ❤️ — feel free to fork, use and share!
