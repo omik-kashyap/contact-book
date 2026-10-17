@@ -144,6 +144,7 @@ def api_get_stats():
     return jsonify({"success": True, "stats": stats})
 
 if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")
     port = int(os.environ.get("PORT", 5002))
     print(f"📇 Contact Book running at http://127.0.0.1:{port}")
     app.run(host="0.0.0.0", port=port, debug=True)
