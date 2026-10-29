@@ -9,7 +9,11 @@ import csv
 import io
 from datetime import datetime
 
-DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "contacts.db")
+# Support serverless read-only environments like Vercel
+if os.environ.get("VERCEL"):
+    DB_PATH = "/tmp/contacts.db"
+else:
+    DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "contacts.db")
 
 def get_connection():
     conn = sqlite3.connect(DB_PATH)
